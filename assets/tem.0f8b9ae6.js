@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as s,a as e}from"./index.fe0d09f7.js";const c={},n={class:"container"},r=e("h1",null,"\u7DB2\u7AD9\u66F4\u65B0\u4E2D...",-1),_=e("a",{style:{color:"blue"},href:"https://forms.gle/AY6F7dF1nEcwov5D7"},"-->\u9EDE\u64CA\u5148\u524D\u5F80\u7C21\u55AE\u5831\u540D",-1),a=[r,_];function l(d,i){return t(),s("div",n,a)}var h=o(c,[["render",l]]);export{h as default};

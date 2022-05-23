@@ -1,21 +1,26 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Star from "@/components/Star.vue";
+import Header from "@/components/Header.vue";
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <Header></Header>
+  <router-view></router-view>
 </template>
 
-<style>
+<style lang="scss">
 #app {
+  background-color: rgb(1, 3, 21);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  padding-top: $header-height;
+  & > * {
+    flex: 1 1 100%;
+  }
 }
 </style>

@@ -1,13 +1,13 @@
 <script setup>
 import HomeSliderShow from "./SlideShow.vue";
 import HomeNavigator from "./Navigator.vue";
+import HomeHeroBanner from "./HeroBanner.vue";
 import { vBackgroundImage as vBg } from "@/plugin/directives";
 import bgNoise from "@/assets/noise.png";
 import bgNoiseLarge from "@/assets/noise.png";
 </script>
 <template>
   <div class="home">
-    Test
     <div class="home__bg" v-bg="bgNoise"></div>
     <HomeSliderShow
       :items="[
@@ -19,6 +19,7 @@ import bgNoiseLarge from "@/assets/noise.png";
       ]"
     ></HomeSliderShow>
     <HomeNavigator></HomeNavigator>
+    <HomeHeroBanner></HomeHeroBanner>
   </div>
 </template>
 
@@ -27,6 +28,9 @@ import bgNoiseLarge from "@/assets/noise.png";
   width: 100%;
   position: relative;
 
+  & > * {
+    position: relative;
+  }
   &__bg {
     position: absolute;
     top: -$header-height;

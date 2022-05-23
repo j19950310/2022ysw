@@ -4,7 +4,13 @@
       <router-link class="header__link" to="/"> 首頁 </router-link>
       <router-link class="header__link" to="/news"> 最新消息 </router-link>
       <router-link class="header__link" to="/works"> 作品欣賞 </router-link>
-      <a class="header__link"> 線上報名 </a>
+      <a
+        class="header__link"
+        target="_blank"
+        href="https://forms.gle/AY6F7dF1nEcwov5D7"
+      >
+        線上報名
+      </a>
     </div>
   </div>
 </template>
@@ -17,6 +23,7 @@
   left: 0;
   width: 100%;
   height: $header-height;
+  color: #fff;
   @include text-header();
   &__container {
     display: flex;

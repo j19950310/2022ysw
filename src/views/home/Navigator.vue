@@ -73,6 +73,7 @@ const endProgressStyle = computed(() => {
   position: relative;
   width: 100%;
   height: 200px;
+  margin-bottom: 100px;
   &__wrapper {
     position: absolute;
     top: 0;

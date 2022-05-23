@@ -7,6 +7,7 @@ import bgNoiseLarge from "@/assets/noise.png";
 </script>
 <template>
   <div class="home">
+    Test
     <div class="home__bg" v-bg="bgNoise"></div>
     <HomeSliderShow
       :items="[

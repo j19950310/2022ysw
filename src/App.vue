@@ -4,23 +4,24 @@ import Header from "@/components/Header.vue";
 </script>
 
 <template>
-  <Header></Header>
-  <router-view></router-view>
+  <h1>網站更新中...</h1>
+  <a style="color: blue" href="https://forms.gle/AY6F7dF1nEcwov5D7"
+    >-->點擊先前往簡單報名</a
+  >
 </template>
 
 <style lang="scss">
 #app {
-  background-color: rgb(1, 3, 21);
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  // background-color: rgb(1, 3, 21);
+  font-size: 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
   height: 200vh;
   padding-top: $header-height;
-  & > * {
-    flex: 1 1 100%;
-  }
+
+  // & > * {
+  //   flex: 1 1 100%;
+  // }
 }
 </style>

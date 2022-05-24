@@ -25,6 +25,7 @@ defineProps({
 </template>
 <style lang="scss">
 .home-slide-show {
+  padding: 100px 0;
   position: relative;
   width: 100%;
   overflow: hidden;

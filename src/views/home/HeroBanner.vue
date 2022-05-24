@@ -1,5 +1,6 @@
 <script setup>
 import imageMain from "@/assets/main.png";
+import imageCompany from "@/assets/company.png";
 </script>
 <template>
   <div class="home-hero-banner container">
@@ -27,14 +28,29 @@ import imageMain from "@/assets/main.png";
       <div class="home-hero-banner__bottom-line">
         <div class="home-hero-banner__bottom-hr"></div>
       </div>
-      <div class="home-hero-banner__bottom-line"></div>
+      <div class="home-hero-banner__bottom-line">
+        <div class="home-hero-banner__bottom-price">
+          <p v-for="(text, i) in '總獎金35萬'" v-text="text" :key="i"></p>
+        </div>
+      </div>
+      <div class="home-hero-banner__bottom-line">
+        <div class="home-hero-banner__bottom-copyright">
+          <p>主辦單位 | 雲林縣政府新聞處</p>
+          <img width="70" :src="imageCompany" alt="" />
+          <p>承辦單位 | 貓草影像有限公司</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <style lang="scss">
 .home-hero-banner {
+  $pink: #b49b92;
+  padding-top: 100px;
+  padding-bottom: 100px;
   &__top {
-    background: -webkit-linear-gradient(45deg, $color-pink, #fff);
+    padding: 40px 0;
+    background: -webkit-linear-gradient(45deg, $pink, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Noto Serif TC", serif;
@@ -52,14 +68,15 @@ import imageMain from "@/assets/main.png";
     }
   }
   &__bottom {
+    padding: 40px 0;
     font-family: "Noto Serif TC", serif;
-    $width: 1000px;
-    $height: 530px;
-    width: 60%;
+    width: 680px;
+    max-width: 100%;
     margin-left: auto;
     color: #fff;
     &-line {
       display: flex;
+      padding: 4px 0;
     }
     &-border {
       padding: 2px 20px 6px;
@@ -93,8 +110,32 @@ import imageMain from "@/assets/main.png";
     }
     &-hr {
       width: 100%;
-      height: 2px;
+      height: 3px;
       background-color: #fff;
+    }
+    &-price {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      line-height: 1.2;
+      font-weight: 700;
+      font-size: 100px;
+      background: -webkit-linear-gradient(45deg, $pink, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &-copyright {
+      width: 100%;
+      display: flex;
+      font-weight: 700;
+      font-size: 20px;
+      align-items: center;
+      justify-content: space-between;
+      letter-spacing: 0.1em;
+      & > * {
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
     }
   }
 }

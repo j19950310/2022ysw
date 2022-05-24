@@ -25,7 +25,22 @@
   height: $header-height;
   color: #fff;
   @include text-header();
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background-color: rgb(1, 3, 21);
+    opacity: 0.5;
+  }
   &__container {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: end;
     align-items: center;

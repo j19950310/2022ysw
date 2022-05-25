@@ -107,7 +107,7 @@
     padding: 80px 160px;
     text-align: left;
     @include media-breakpoint-down(md) {
-      padding: 40px;
+      padding: 40px 20px;
     }
     &-title {
       margin-bottom: 40px;
@@ -123,6 +123,10 @@
         rgb(239, 207, 190),
         rgb(252, 245, 240)
       );
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
     }
     &-text {
       margin-bottom: 40px;
@@ -133,6 +137,10 @@
       background: -webkit-linear-gradient(45deg, $color-pink, #fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
       &-head {
         color: rgb(195, 171, 181);
         -webkit-background-clip: none;
@@ -143,6 +151,9 @@
         list-style-type: decimal;
         list-style-position: inside;
         margin-bottom: 2em;
+        @include media-breakpoint-down(md) {
+          padding-left: 12px;
+        }
       }
       ul {
       }

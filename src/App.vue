@@ -19,5 +19,21 @@ import Header from "@/components/Header.vue";
   & > * {
     flex: 1 1 100%;
   }
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+body {
+  @include media-breakpoint-down(md) {
+    overflow: hidden;
+  }
 }
 </style>

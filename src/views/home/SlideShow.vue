@@ -32,6 +32,9 @@ defineProps({
   &__container {
     @include media-breakpoint-down(md) {
       overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
   &__wrapper {

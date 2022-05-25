@@ -18,7 +18,6 @@ import bgNoiseLarge from "@/assets/noise.png";
           'https://source.unsplash.com/random/1024x768',
           'https://source.unsplash.com/random/1024x768',
           'https://source.unsplash.com/random/1024x768',
-          'https://source.unsplash.com/random/1024x768',
         ]"
       ></HomeSliderShow>
       <HomeNavigator></HomeNavigator>

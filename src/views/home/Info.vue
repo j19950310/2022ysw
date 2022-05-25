@@ -18,23 +18,48 @@
         <h2>徵件辦法</h2>
       </div>
       <div class="home-info__content-text">
-        徵件活動採「先審查，後拍攝」。請參賽者應檢具報名表及短片製作企劃書，依下列
-        各款項規定，依序具體填寫:
-        1.片名、類型、創作理念、預定於本縣拍片之場景、預估製作期程。 2.
-        故事大綱(含分場大綱[須註明拍攝場景]、人物介紹;動畫類需提分鏡
-        圖，以及角色介紹和場景設定的相關圖文輔助說明)。 (一)第一階段:企劃書初審
-        3. 影片製作團隊(個人)介紹(含製片人、導演、編劇、主要演員、藝術與
-        技術人員等)，請另檢附;若劇本或是故事大綱改編自他人著作者，應檢
-        附該著作及該著作之著作財產權人同意改編劇本之授權文件影本。 4.
-        參賽者個人(團隊)過去實績說明(例如過去製作影片之經歷、得獎紀錄
-        等，請盡量提供，以增加企劃案說服力)。 5. 對本縣行銷推廣之效益評估。
+        <ul>
+          <li>
+            <p class="home-info__content-text-head">
+              （一）第一階段：企劃書初審
+            </p>
+            徵件活動採「先審查，後拍攝」。請參賽者應檢具報名表及短片製作企劃書，依下列
+            各款項規定，依序具體填寫：
+            <ol>
+              <li>
+                片名、類型、創作理念、預定於本縣拍片之場景、預估製作期程。
+              </li>
+              <li>
+                故事大綱(含分場大綱[須註明拍攝場景]、人物介紹;動畫類需提分鏡
+                圖，以及角色介紹和場景設定的相關圖文輔助說明)。
+              </li>
+              <li>
+                影片製作團隊(個人)介紹(含製片人、導演、編劇、主要演員、藝術與
+                技術人員等)，請另檢附;若劇本或是故事大綱改編自他人著作者，應檢
+                附該著作及該著作之著作財產權人同意改編劇本之授權文件影本。
+              </li>
+              <li>
+                參賽者個人(團隊)過去實績說明(例如過去製作影片之經歷、得獎紀錄
+                等，請盡量提供，以增加企劃案說服力)。
+              </li>
+              <li>對本縣行銷推廣之效益評估。</li>
+            </ol>
+          </li>
+          <li>
+            <p class="home-info__content-text-head">（二）</p>
+            <ol>
+              <li>
+                視大選園隊企制書之肉容露求，遴聘合適之車業指導和員，針對企剒典指
+              </li>
+            </ol>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </template>
 <style lang="scss">
 .home-info {
-  height: 1000px;
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -81,7 +106,9 @@
   &__content {
     padding: 80px 160px;
     text-align: left;
-
+    @include media-breakpoint-down(md) {
+      padding: 40px;
+    }
     &-title {
       margin-bottom: 40px;
       width: 100%;
@@ -106,6 +133,19 @@
       background: -webkit-linear-gradient(45deg, $color-pink, #fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      &-head {
+        color: rgb(195, 171, 181);
+        -webkit-background-clip: none;
+        -webkit-text-fill-color: rgb(195, 171, 181);
+      }
+      ol {
+        padding-left: 2.5em;
+        list-style-type: decimal;
+        list-style-position: inside;
+        margin-bottom: 2em;
+      }
+      ul {
+      }
     }
   }
 }

@@ -2,8 +2,12 @@
   <div class="header">
     <div class="header__container container">
       <router-link class="header__link" to="/"> 首頁 </router-link>
-      <router-link class="header__link" to="/news"> 最新消息 </router-link>
-      <router-link class="header__link" to="/works"> 作品欣賞 </router-link>
+      <router-link class="header__link -disable" to="/news">
+        最新消息
+      </router-link>
+      <router-link class="header__link -disable" to="/works">
+        作品欣賞
+      </router-link>
       <a
         class="header__link"
         target="_blank"
@@ -24,7 +28,11 @@
   width: 100%;
   height: $header-height;
   color: #fff;
+
   @include text-header();
+  @include media-breakpoint-down(sm) {
+    white-space: nowrap;
+  }
   &::before {
     content: "";
     display: block;
@@ -48,6 +56,13 @@
   }
   &__link {
     padding: $header-padding;
+    @include media-breakpoint-down(md) {
+      padding: 0 10px;
+    }
+    &.-disable {
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
 }
 </style>

@@ -48,6 +48,10 @@ import imageCompany from "@/assets/company.png";
   $pink: #b49b92;
   padding-top: 100px;
   padding-bottom: 100px;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
   &__top {
     padding: 40px 0;
     background: -webkit-linear-gradient(45deg, $pink, #fff);
@@ -56,15 +60,26 @@ import imageCompany from "@/assets/company.png";
     font-family: "Noto Serif TC", serif;
     font-weight: 600;
     text-align-last: left;
+    img {
+      max-width: 100%;
+    }
     &-desc {
       margin-top: 20px;
       font-size: 46px;
       letter-spacing: 4px;
+      @include media-breakpoint-down(md) {
+        letter-spacing: 0.1px;
+        font-size: 24px;
+      }
     }
     &-title {
       width: 100%;
       letter-spacing: 7.5px;
       font-size: 54px;
+      @include media-breakpoint-down(md) {
+        letter-spacing: 0.1px;
+        font-size: 24px;
+      }
     }
   }
   &__bottom {
@@ -88,6 +103,9 @@ import imageCompany from "@/assets/company.png";
       font-size: 40px;
       letter-spacing: 0.1em;
       white-space: nowrap;
+      @include media-breakpoint-down(md) {
+        font-size: 24px;
+      }
     }
     &-date {
       white-space: nowrap;
@@ -100,6 +118,9 @@ import imageCompany from "@/assets/company.png";
       display: flex;
       align-items: center;
       justify-content: center;
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+      }
     }
     &-space-text {
       display: flex;
@@ -107,6 +128,9 @@ import imageCompany from "@/assets/company.png";
       justify-content: space-between;
       font-weight: 700;
       font-size: 36px;
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+      }
     }
     &-hr {
       width: 100%;
@@ -123,6 +147,9 @@ import imageCompany from "@/assets/company.png";
       background: -webkit-linear-gradient(45deg, $pink, #fff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include media-breakpoint-down(md) {
+        font-size: 70px;
+      }
     }
     &-copyright {
       width: 100%;
@@ -132,6 +159,9 @@ import imageCompany from "@/assets/company.png";
       align-items: center;
       justify-content: space-between;
       letter-spacing: 0.1em;
+      @include media-breakpoint-down(md) {
+        font-size: 12px;
+      }
       & > * {
         flex: 0 0 auto;
         white-space: nowrap;

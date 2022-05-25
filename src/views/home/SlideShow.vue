@@ -30,6 +30,9 @@ defineProps({
   width: 100%;
   overflow: hidden;
   &__container {
+    @include media-breakpoint-down(md) {
+      overflow-x: scroll;
+    }
   }
   &__wrapper {
     display: flex;
@@ -42,6 +45,10 @@ defineProps({
     width: clamp(20%, 200px, 50%);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     margin: 0 -2.5%;
+    @include media-breakpoint-down(md) {
+      flex: 0 0 200px;
+      min-width: 200px;
+    }
     &::before {
       content: "";
       display: block;

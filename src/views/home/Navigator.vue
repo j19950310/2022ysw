@@ -3,7 +3,7 @@ import Star from "@/components/Star.vue";
 import { useWindowScroll, useElementSize } from "@vueuse/core";
 import { computed, ref } from "vue";
 const { x, y } = useWindowScroll();
-const progress = ref(0.5);
+const progress = ref(0.05);
 const progressNavigator = ref(null);
 const starRef = ref(null);
 const { width: navW, height: navH } = useElementSize(progressNavigator);
@@ -11,11 +11,11 @@ const { width: starW, height: starH } = useElementSize(starRef);
 
 const stickyStyle = computed(() => {
   return {
-    position: y.value > 200 ? "fixed" : "relative",
-    top: 0,
-    left: y.value > 200 ? "50%" : 0,
-    transform: y.value > 200 ? "translate(-50%, 100px)" : "none",
-    zIndex: 1,
+    // position: y.value > 200 ? "fixed" : "relative",
+    // top: 0,
+    // left: y.value > 200 ? "50%" : 0,
+    // transform: y.value > 200 ? "translate(-50%, 100px)" : "none",
+    // zIndex: 1,
   };
 });
 const starStyle = computed(() => {
@@ -84,6 +84,9 @@ const endProgressStyle = computed(() => {
     display: flex;
     position: relative;
     width: 100%;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
   }
   &__item {
     @include text-header();
@@ -95,8 +98,17 @@ const endProgressStyle = computed(() => {
     flex: 0 1 150px;
     width: 150px;
     border-radius: 50%;
+    transition: 0.3s ease;
+    cursor: pointer;
     background: linear-gradient(-45deg, rgb(239, 207, 190), rgb(252, 245, 240));
+    @include media-breakpoint-down(md) {
+      flex: 0 1 120px;
+      margin-bottom: 20px;
+    }
 
+    @include hover {
+      transform: scale(1.1);
+    }
     span {
       display: block;
       padding: 8px;
@@ -110,7 +122,6 @@ const endProgressStyle = computed(() => {
   &__progress {
     --progress-height: 80px;
     position: relative;
-    border: 1px solid #fff;
     height: var(--progress-height, 80px);
     &-start,
     &-end {

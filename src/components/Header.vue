@@ -2,9 +2,9 @@
   <div class="header">
     <div class="header__container container">
       <router-link class="header__link" to="/"> 首頁 </router-link>
-      <router-link class="header__link -disable" to="/news">
+      <a class="header__link" href="https://www.facebook.com/YunlinSW">
         最新消息
-      </router-link>
+      </a>
       <router-link class="header__link -disable" to="/works">
         作品欣賞
       </router-link>
@@ -56,12 +56,9 @@
   }
   &__link {
     padding: $header-padding;
-    @include media-breakpoint-down(md) {
-      padding: 0 10px;
-    }
     &.-disable {
-      opacity: 0.5;
       pointer-events: none;
+      opacity: 0.5;
     }
   }
 }

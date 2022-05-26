@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted } from "vue";
 import HomeSliderShow from "./SlideShow.vue";
 import HomeNavigator from "./Navigator.vue";
 import HomeHeroBanner from "./HeroBanner.vue";
@@ -6,26 +7,38 @@ import HomeVideoPlay from "./VideoPlay.vue";
 import HomeInfo from "./Info.vue";
 import { vBackgroundImage as vBg } from "@/plugin/directives";
 import bgNoise from "@/assets/noise.png";
-import bgNoiseLarge from "@/assets/noise.png";
+import bgNoiseLarge from "@/assets/noise-large.png";
+import SlideShowImage1 from "@/assets/pixta_37279544_M.jpg";
+import SlideShowImage2 from "@/assets/pixta_30723336_M.jpg";
+import SlideShowImage3 from "@/assets/pixta_29821523_M.jpg";
+import SlideShowImage4 from "@/assets/pixta_28112844_M.jpg";
+const bgImage = ref(bgNoise);
+onMounted(() => {
+  const img = new Image();
+  img.src = bgNoiseLarge;
+  img.onload = () => {
+    bgImage.value = bgNoiseLarge;
+  };
+});
 </script>
 <template>
   <div class="home">
     <div class="home-top">
-      <div class="home__bg" v-bg="bgNoise"></div>
+      <div class="home__bg" v-bg="bgImage"></div>
+      <!-- <HomeNavigator></HomeNavigator> -->
+      <HomeHeroBanner></HomeHeroBanner>
       <HomeSliderShow
         :items="[
-          'https://source.unsplash.com/random/1024x768',
-          'https://source.unsplash.com/random/1024x768',
-          'https://source.unsplash.com/random/1024x768',
-          'https://source.unsplash.com/random/1024x768',
+          SlideShowImage1,
+          SlideShowImage2,
+          SlideShowImage3,
+          SlideShowImage4,
         ]"
       ></HomeSliderShow>
-      <HomeNavigator></HomeNavigator>
-      <HomeHeroBanner></HomeHeroBanner>
     </div>
-    <HomeVideoPlay></HomeVideoPlay>
+    <!-- <HomeVideoPlay></HomeVideoPlay> -->
     <div class="home-bottom">
-      <div class="home__bg" v-bg="bgNoise"></div>
+      <div class="home__bg" v-bg="bgImage"></div>
       <HomeInfo></HomeInfo>
     </div>
   </div>

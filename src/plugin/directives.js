@@ -8,7 +8,7 @@ export const vBackgroundImage = {
   beforeMount() {},
   mounted() {},
   beforeUpdate() {},
-  updated() {
+  updated(el, { value }) {
     el.style.backgroundImage = `url(${value})`;
     el.style.backgroundSize = "cover";
     el.style.backgroundPosition = "center";

@@ -9,11 +9,11 @@ const routes = [
     name: "home",
     component: () => import("@/views/home/index.vue"),
   },
-  {
-    path: "/dev",
-    name: "home",
-    component: () => import("@/views/home/index.vue"),
-  },
+  // {
+  //   path: "/dev",
+  //   name: "home",
+  //   component: () => import("@/views/home/index.vue"),
+  // },
   {
     path: "/news",
     name: "news",
@@ -24,7 +24,10 @@ const routes = [
     name: "works",
     component: () => import("@/views/works.vue"),
   },
-  { path: "/:pathMatch(.*)", component: () => import("@/views/_404.vue") },
+  {
+    path: "/:pathMatch(.*)",
+    component: () => import("@/views/home/index.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHashHistory(),

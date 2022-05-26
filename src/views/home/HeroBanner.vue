@@ -46,14 +46,10 @@ import imageCompany from "@/assets/company.png";
 <style lang="scss">
 .home-hero-banner {
   $pink: #b49b92;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  @include media-breakpoint-down(md) {
-    padding-bottom: 30px;
-    padding-top: 30px;
-  }
+  padding-top: 20px;
+  padding-bottom: 20px;
   &__top {
-    padding: 40px 0;
+    padding: 20px 0;
     background: -webkit-linear-gradient(45deg, $pink, #fff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

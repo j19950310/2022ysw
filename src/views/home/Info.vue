@@ -177,6 +177,10 @@
     left: 0;
     width: 100%;
     border: 4px solid #fff;
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 40px);
+      left: 20px;
+    }
     &-top,
     &-bottom {
       position: absolute;
@@ -213,7 +217,7 @@
     padding: 80px 160px;
     text-align: left;
     @include media-breakpoint-down(md) {
-      padding: 40px 20px;
+      padding: 40px;
     }
     &-title {
       margin-bottom: 40px;
@@ -244,7 +248,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       @include media-breakpoint-down(md) {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 24px;
       }
       &.-info {

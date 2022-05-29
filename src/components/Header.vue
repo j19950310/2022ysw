@@ -53,9 +53,20 @@
     justify-content: end;
     align-items: center;
     height: 100%;
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
   &__link {
     padding: $header-padding;
+    @include media-breakpoint-down(sm) {
+      padding: 8px;
+      flex: 0 1 auto;
+    }
     &.-disable {
       pointer-events: none;
       opacity: 0.5;

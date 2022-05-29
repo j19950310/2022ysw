@@ -84,7 +84,11 @@ import imageCompany from "@/assets/company.png";
     width: 680px;
     max-width: 100%;
     margin-left: auto;
+    overflow: hidden;
     color: #fff;
+    @include media-breakpoint-down(md) {
+      width: auto;
+    }
     &-line {
       display: flex;
       padding: 4px 0;
@@ -156,7 +160,7 @@ import imageCompany from "@/assets/company.png";
       justify-content: space-between;
       letter-spacing: 0.1em;
       @include media-breakpoint-down(md) {
-        font-size: 12px;
+        font-size: 10px;
       }
       & > * {
         flex: 0 0 auto;
